@@ -1,2 +1,2 @@
 # selectathon
-Java and .Net anagram exercise for graduate recruitment
+Java and .Net anagram exercise for recruitment
