@@ -1,0 +1,111 @@
+namespace DotNetRecruit
+{
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+
+    public class AnagramService
+    {
+        public IEnumerable<AnagramCounter> Compute(string dictionaryLocation)
+        {
+            var words = File.ReadAllLines(dictionaryLocation);
+            string path = File.ReadAllText(dictionaryLocation);
+            
+
+
+            
+            int count1 = 0;
+            int count2 = 0;
+            int count3 = 0;
+            int count4 = 0;
+            int count5 = 0;
+            int count6 = 0;
+            int count7 = 0;
+            int count8 = 0;
+            int count9 = 0;
+            int count10 = 0;
+            
+
+
+                foreach (var word in path.Split())
+                {
+                    if (word.Length ==1)
+                    {
+                        count1++;
+                        
+                    }
+
+                    if (word.Length == 2)
+                    {
+                        count2++;
+
+                    }
+
+                    if (word.Length == 3)
+                    {
+                        count3++;
+
+                    }
+
+                    if (word.Length == 4)
+                    {
+                        count4++;
+
+                    }
+
+                    if (word.Length == 5)
+                    {
+                        count5++;
+
+                    }
+
+                    if (word.Length == 6)
+                    {
+                        count6++;
+
+                    }
+
+                    if (word.Length == 7)
+                    {
+                        count7++;
+
+                    }
+
+                    if (word.Length == 8)
+                    {
+                        count8++;
+
+                    }
+
+                    if (word.Length == 9)
+                    {
+                        count9++;
+
+                    }
+
+                    if (word.Length == 10)
+                    {
+                        count10++;
+
+                    }
+                  
+                    //if statements used for character counts of 1 to 10. If dictionary expands to include words over 10 characters, thye code below would need to be modified to accomodate an iteration.
+                    //Under the assumption that this code should suffice for this assignment which is capped at 10 character words.
+                }
+
+            return new List<AnagramCounter>
+                       {
+                           new AnagramCounter { WordLength = 1, Count = count1 },
+                           new AnagramCounter { WordLength = 2, Count = count2 },
+                           new AnagramCounter { WordLength = 3, Count = count3 },
+                           new AnagramCounter { WordLength = 4, Count = count4 },
+                           new AnagramCounter { WordLength = 5, Count = count5 },
+                           new AnagramCounter { WordLength = 6, Count = count6 },
+                           new AnagramCounter { WordLength = 7, Count = count7 },
+                           new AnagramCounter { WordLength = 8, Count = count8 },
+                           new AnagramCounter { WordLength = 9, Count = count9 },
+                           new AnagramCounter { WordLength = 10, Count = count10 }
+                       };
+        }
+    }
+}
